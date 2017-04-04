@@ -1,0 +1,29 @@
+s/.*SEVERE/SEVERE/
+s/PARTITION PART[0-9]* VALUES/PARTITION PARTXXXXXX VALUES /
+s/LESS THAN ([0-9]*)/LESS THAN (XXXXXXX) /
+s/PARTITION PART[0-9]*/PARTITION PARTXXXXXX /
+s/id [0-9]*/id XXXX /
+s/node: [0-9]*/node: XXXXXX /
+s/id [[0-9]]*/id [[XXXXXX]] /
+s/Machine  Id: [0-9]*/Machine  Id: XX /
+s/machine id:[0-9]*/machine id:XX /
+s/ScheduledReportId:[0-9]*/ScheduledReportId:XXX /
+s/Node Id: [0-9]*/Node Id: XX /
+s/ThreadID=[0-9]*/ThreadID=X /
+s/\(Account key doesnt match with  current account for the machine id\).*/\1/
+s/\(machine ID: \)[0-9]*\( has no nodes associated with it\)/\1X\2/g
+s/MetricValue (.*)/MetricValue()/
+s/Metric id [0-9]*/Metric id X /g
+s/Thread-[0-9]*/Thread-X /
+s/Thread-[0-9]*/Thread-X /
+s/ID:[0-9]*/ID:X /
+s/id:[0-9]*/id:X /
+s/id: [0-9]*/id: X /
+s/ID:[0-9]*/ID:X /
+s/ID: [0-9]*/ID: X/
+s/MonitorableSSLSelectorHandler@[0-9,a-z]*/MonitorableSSLSelectorHandler/
+s/MonitorableSelectorHandler@[0-9,a-z]*/MonitorableSelectorHandler/
+s/ID [0-9]*/ID X /
+s/.java:[0-9]*/.java:XXX /
+s/... [0-9]* more/... XXX more /
+s/skipped [0-9]* time/skipped XXX time /
